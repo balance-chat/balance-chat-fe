@@ -1,18 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/login/Login';
 import Join from './components/join/Join';
-import Chat from './components/chat/Chat';
+import ChatPage from './components/chat/ChatPage';
+import { RootContainer } from './components/ui/Layout';
 
 function App() {
   return (
-    <div>
+    <RootContainer>
       <Routes>
         <Route path="/" />
         <Route path="/login" element={<Login />} />
         <Route path="/join" element={<Join />} />
-        <Route path="/chat" element={<Chat />} />
+        <Route path="/chat" element={<ChatPage />} />
       </Routes>
-    </div>
+    </RootContainer>
   );
 }
 
