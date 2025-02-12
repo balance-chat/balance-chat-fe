@@ -27,6 +27,7 @@ export const textArea = css`
   overflow: hidden;
   line-height: 20px;
   display: block;
+  background: transparent;
 
   &::placeholder {
     font-size: 12px;
