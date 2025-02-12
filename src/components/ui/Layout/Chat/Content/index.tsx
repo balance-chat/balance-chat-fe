@@ -7,8 +7,8 @@ function Content({ children, ...props }: DivProps) {
     <div
       css={css`
         flex: 1;
-        overflow-y: auto;
-        padding: 8px;
+        overflow-y: scroll;
+        padding: 8px 0 8px 8px;
       `}
       {...props}
     >
