@@ -1,4 +1,5 @@
-import { Chat } from '../ui/Layout';
+import { Chat } from '../../components/ui/Layout';
+import ChatInput from '../../components/chat/ChatInput/ChatInput';
 
 function ChatPage() {
   return (
@@ -12,10 +13,10 @@ function ChatPage() {
         <div>메시지</div>
       </Chat.Content>
       <Chat.Section>
-        <div>채팅 입력창</div>
+        <ChatInput />
       </Chat.Section>
     </Chat>
   );
 }
 
-export default ChatPage;
+export { ChatPage };

@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/login/Login';
 import Join from './components/join/Join';
-import ChatPage from './components/chat/ChatPage';
 import { RootContainer } from './components/ui/Layout';
+import { ChatPage } from './pages';
 
 function App() {
   return (
