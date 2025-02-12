@@ -34,6 +34,7 @@ body,
     'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   height: 100%;
+  background-color: #f8f8f8;
 }
 
 h1,
@@ -84,4 +85,13 @@ table {
 td,
 th {
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4e4e4;
+  border-radius: 4px;
 }
