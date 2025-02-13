@@ -1,9 +1,14 @@
 import { css } from '@emotion/react';
+import { sizes } from './styles.constant';
+
+export const avatarSize = (size: 's' | 'm') => css`
+  width: ${sizes[size].width};
+  height: ${sizes[size].height};
+  font-size: ${sizes[size].iconSize};
+`;
 
 export const circular = css`
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
+  border-radius: 50%;
 `;
 
 export const anonym = css`

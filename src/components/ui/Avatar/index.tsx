@@ -1,28 +1,35 @@
 /** @jsxImportSource @emotion/react */
 
 import { BiSolidUser } from 'react-icons/bi';
-import { circular, anonym, avatar } from './styles.css';
+import { circular, anonym, avatar, avatarSize } from './styles.css';
+
+type Size = 's' | 'm';
 
 interface Props {
   picture?: string;
+  size?: Size;
 }
 
-function Avatar({ picture }: Props) {
-  return !picture ? <AnonymAvatar /> : <PictureAvatar picture={picture} />;
+function Avatar({ picture, size = 'm' }: Props) {
+  return !picture ? (
+    <AnonymAvatar size={size} />
+  ) : (
+    <PictureAvatar picture={picture} size={size} />
+  );
 }
 
-function AnonymAvatar() {
+function AnonymAvatar({ size }: { size: Size }) {
   return (
-    <div css={[circular, anonym]}>
-      <BiSolidUser size={20} />
+    <div css={[circular, anonym, avatarSize(size)]}>
+      <BiSolidUser />
     </div>
   );
 }
 
-function PictureAvatar({ picture }: Props) {
+function PictureAvatar({ picture, size = 'm' }: Props) {
   return (
     <div>
-      <img css={[circular, avatar]} src={picture} />
+      <img css={[circular, avatar, avatarSize(size)]} src={picture} />
     </div>
   );
 }
