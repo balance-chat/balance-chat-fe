@@ -14,7 +14,7 @@ function Login() {
       <LoginForm />
       <div css={bottom}>
         <span>아직 회원이 아니라면?</span>
-        <a href="/" css={underline}>
+        <a href="/join" css={underline}>
           회원가입하기
         </a>
       </div>
