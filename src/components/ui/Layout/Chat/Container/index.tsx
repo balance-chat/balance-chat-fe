@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { DivProps } from '../@types';
+import { DivProps } from '@/types/props.type';
 
 function Container({ children, ...props }: DivProps) {
   return (
