@@ -24,8 +24,8 @@ const TEST_MESSAGE_2 = {
 function ChatPage() {
   return (
     <Chat>
-      <Chat.Section>
-        <Header />
+      <Chat.Section style={{ paddingBottom: 0 }}>
+        <Header title="둘 중 같이 밥 먹기 싫은 사람은?" />
       </Chat.Section>
       <Chat.Content>
         <MessageGroup by={ChatBy.User} messages={TEST_MESSAGE.MESSAGES} />
