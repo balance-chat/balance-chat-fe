@@ -1,14 +1,20 @@
 /** @jsxImportSource @emotion/react */
+
 import { css } from '@emotion/react';
 import { DivProps } from '@/types/props.type';
 
-function Container({ children, ...props }: DivProps) {
+function Center({ children, ...props }: DivProps) {
   return (
     <div
       css={css`
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        height: 100%;
+        gap: 40px;
+        width: 100%;
+        min-height: 100%;
+        padding: 8px;
       `}
       {...props}
     >
@@ -17,4 +23,4 @@ function Container({ children, ...props }: DivProps) {
   );
 }
 
-export { Container };
+export { Center };

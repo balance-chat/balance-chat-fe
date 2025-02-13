@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/login/Login';
-import Join from './components/join/Join';
 import { RootContainer } from './components/ui/Layout';
 import { ChatPage } from './pages';
+import JoinPage from './pages/join';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" />
         <Route path="/login" element={<Login />} />
-        <Route path="/join" element={<Join />} />
+        <Route path="/join" element={<JoinPage />} />
         <Route path="/chat" element={<ChatPage />} />
       </Routes>
     </RootContainer>
