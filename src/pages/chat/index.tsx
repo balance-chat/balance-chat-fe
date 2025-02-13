@@ -2,6 +2,7 @@ import { ChatBy } from '@/types/message.type';
 import { Chat } from '@/components/ui/Layout';
 import ChatInput from '@/components/chat/ChatInput/ChatInput';
 import MessageGroup from '@/components/chat/MessageGroup/MessageGroup';
+import Header from '@/components/chat/Header/Header';
 
 const TEST_MESSAGE = {
   MESSAGES: [
@@ -24,7 +25,7 @@ function ChatPage() {
   return (
     <Chat>
       <Chat.Section>
-        <div>option 1 vs option 2</div>
+        <Header />
       </Chat.Section>
       <Chat.Content>
         <MessageGroup by={ChatBy.User} messages={TEST_MESSAGE.MESSAGES} />
