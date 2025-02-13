@@ -18,6 +18,7 @@ function ButtonAgree({ children, ...props }: Props) {
 
   return (
     <button
+      type="button"
       css={[btn, isChecked ? checked : unchecked]}
       onClick={toggle}
       {...props}
