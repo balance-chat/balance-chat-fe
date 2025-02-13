@@ -15,5 +15,6 @@ export const mainText = css`
 export const subText = css`
   font-size: 12px;
   line-height: 20px;
-  color: #999;
+  font-weight: 600;
+  color: #333;
 `;
