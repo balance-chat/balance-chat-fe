@@ -1,8 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import { RootContainer } from './components/ui/Layout';
-import { ChatPage } from './pages';
-import JoinPage from './pages/join';
-import LoginPage from './pages/login';
+import { RootContainer } from './components/layout/RootContainer/RootContainer';
+import { ChatPage, JoinPage, LoginPage } from './pages';
 
 function App() {
   return (
