@@ -22,5 +22,5 @@ export const ok = css`
 
 export const err = css`
   border: 1.8px solid #ff7b72;
-  color: #ff7b72;
+  /* color: #ff7b72; */
 `;
