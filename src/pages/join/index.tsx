@@ -1,5 +1,5 @@
-import Join from '@/components/join/Join/Join';
-import { Center } from '@/components/ui/Layout';
+import Join from '@/components/join/Join';
+import Center from '@/layout/Center';
 
 function JoinPage() {
   return (

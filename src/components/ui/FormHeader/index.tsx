@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { container, mainText, subText } from './index.css';
+import { container, mainText, subText } from './styles';
 
 interface Props {
   title: string;
@@ -16,4 +16,4 @@ function FormHeader({ title, subtitle }: Props) {
   );
 }
 
-export { FormHeader };
+export default FormHeader;

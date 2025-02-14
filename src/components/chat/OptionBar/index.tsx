@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { BiSolidCheckCircle } from 'react-icons/bi';
-import { bar, barArea, container, content, icon, txt } from './OptionBar.css';
+import { bar, barArea, container, content, icon, txt } from './styles';
 
 interface Props {
   title: string;

@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
 import AvatarGroup from '@/components/ui/AvatarGroup';
-import { bg, card, cardContent, cardTitle, cnt, text } from './Option.css';
-import { colors } from './Option.constant';
+import { bg, card, cardContent, cardTitle, cnt, text } from './styles';
+import { options } from '@/constants/colors';
 
 interface Props {
   title: string;
@@ -11,7 +11,7 @@ interface Props {
 }
 
 function Option({ title, count, isSelected }: Props) {
-  const color = colors[isSelected ? 'selected' : 'unselected'];
+  const color = options[isSelected ? 'selected' : 'unselected'];
 
   return (
     <div css={[card, bg(color.background), text(color.text)]}>

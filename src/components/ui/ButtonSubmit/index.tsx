@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { btn, invalid, valid } from './index.css';
+import { btn, invalid, valid } from './styles';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isValid: boolean;
@@ -19,4 +19,4 @@ function ButtonSubmit({ isValid, children, ...props }: Props) {
   );
 }
 
-export { ButtonSubmit };
+export default ButtonSubmit;

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { BiSolidUser } from 'react-icons/bi';
-import { circular, anonym, avatar, avatarSize } from './styles.css';
+import { circular, anonym, avatar, avatarSize } from './styles';
 
 type Size = 's' | 'm';
 
@@ -34,4 +34,4 @@ function PictureAvatar({ picture, size = 'm' }: Props) {
   );
 }
 
-export { Avatar };
+export default Avatar;

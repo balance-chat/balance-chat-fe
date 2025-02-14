@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
-import { Form } from '@/components/ui/Form';
-import { forgot } from './LoginForm.css';
+import Form from '@/components/ui/Form';
+import { forgot } from './styles';
 
 function LoginForm() {
   return (

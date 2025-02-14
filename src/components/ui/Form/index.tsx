@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 
-import { ButtonAgree } from '../ButtonAgree';
-import { ButtonSubmit } from '../ButtonSubmit';
-import { FormSection } from '../FormSection';
-import { Input } from '../Input';
-import { InputWithCheckBtn } from '../InputWithCheckBtn';
-import { container } from './index.css';
+import ButtonAgree from '../ButtonAgree';
+import ButtonSubmit from '../ButtonSubmit';
+import FormSection from '../FormSection';
+import Input from '../Input';
+import InputWithCheckBtn from '../InputWithCheckBtn';
+import { container } from './styles';
 
 interface Props {
   children: React.ReactNode;
@@ -21,4 +21,4 @@ Form.InputWithCheckBtn = InputWithCheckBtn;
 Form.Agree = ButtonAgree;
 Form.Submit = ButtonSubmit;
 
-export { Form };
+export default Form;

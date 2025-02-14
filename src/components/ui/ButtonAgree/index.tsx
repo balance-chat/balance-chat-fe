@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { BiCheck } from 'react-icons/bi';
-import { btn, checked, icon, txt, unchecked } from './index.css';
+import { btn, checked, icon, txt, unchecked } from './styles';
 import { useState } from 'react';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -31,4 +31,4 @@ function ButtonAgree({ children, ...props }: Props) {
   );
 }
 
-export { ButtonAgree };
+export default ButtonAgree;

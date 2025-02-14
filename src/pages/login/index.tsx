@@ -1,5 +1,5 @@
-import Login from '@/components/login/Login/Login';
-import { Center } from '@/components/ui/Layout';
+import Login from '@/components/login/Login';
+import Center from '@/layout/Center';
 
 function LoginPage() {
   return (

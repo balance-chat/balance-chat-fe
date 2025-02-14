@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { err, inputStyle, ok } from './index.css';
+import { err, inputStyle, ok } from './styles';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   isValid: boolean;
@@ -10,4 +10,4 @@ function Input({ isValid, ...props }: Props) {
   return <input css={[inputStyle, isValid ? ok : err]} {...props} />;
 }
 
-export { Input };
+export default Input;

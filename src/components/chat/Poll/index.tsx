@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
-import { Option } from '@/types/poll.type';
-import OptionBar from '../OptionBar/OptionBar';
+import { Option } from '@/types/chat/poll';
+import OptionBar from '../OptionBar';
 
 interface Props {
   options: Option[];

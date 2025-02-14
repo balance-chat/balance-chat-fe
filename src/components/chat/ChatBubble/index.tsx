@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
-import { ChatBy } from '@/types/message.type';
-import { bubble, other, user } from './ChatBubble.css';
+import { ChatBy } from '@/types/chat/message';
+import { bubble, other, user } from './styles';
 
 interface Props {
   message: string;

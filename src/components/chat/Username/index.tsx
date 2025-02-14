@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { username } from './Username.css';
+import { username } from './styles';
 
 interface Props {
   name: string;

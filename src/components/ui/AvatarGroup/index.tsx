@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
-import { Avatar } from '../Avatar';
-import { avatar, border, container } from './styles.css';
+import Avatar from '../Avatar';
+import { avatar, border, container } from './styles';
 
 interface Props {
   pictures: (string | undefined)[];

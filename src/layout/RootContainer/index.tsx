@@ -23,4 +23,4 @@ const RootContainer = ({ children, maxWidth = '600px' }: Props) => {
   );
 };
 
-export { RootContainer };
+export default RootContainer;

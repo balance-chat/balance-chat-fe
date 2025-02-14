@@ -1,8 +1,8 @@
-import { ChatBy } from '@/types/message.type';
-import { Chat } from '@/components/ui/Layout';
-import ChatInput from '@/components/chat/ChatInput/ChatInput';
-import MessageGroup from '@/components/chat/MessageGroup/MessageGroup';
-import Header from '@/components/chat/Header/Header';
+import { ChatBy } from '@/types/chat/message';
+import Chat from '@/layout/Chat';
+import ChatInput from '@/components/chat/ChatInput';
+import MessageGroup from '@/components/chat/MessageGroup';
+import Header from '@/components/chat/Header';
 
 const TEST_MESSAGE = {
   MESSAGES: [
@@ -48,4 +48,4 @@ function ChatPage() {
   );
 }
 
-export { ChatPage };
+export default ChatPage;

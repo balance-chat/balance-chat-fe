@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
-import { ButtonSubmit } from '../ButtonSubmit';
-import { Input } from '../Input';
-import { inputWithBtn, subBtn } from './index.css';
+import ButtonSubmit from '../ButtonSubmit';
+import Input from '../Input';
+import { inputWithBtn, subBtn } from './styles';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   isValidInput: boolean;
@@ -20,4 +20,4 @@ function InputWithCheckBtn({ isValidInput, isValidBtn, ...props }: Props) {
   );
 }
 
-export { InputWithCheckBtn };
+export default InputWithCheckBtn;

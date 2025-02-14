@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { IoSend } from 'react-icons/io5';
 
-import { container, send, textArea, textWrap } from './styles.css';
+import { container, send, textArea, textWrap } from './styles';
 import { shadow } from '../../../styles/base.css';
 
 function ChatInput() {

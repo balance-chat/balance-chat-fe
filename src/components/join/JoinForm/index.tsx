@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { Form } from '@/components/ui/Form';
+import Form from '@/components/ui/Form';
 
 function JoinForm() {
   return (

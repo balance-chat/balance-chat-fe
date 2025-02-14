@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
-import { header, icon, txt } from './Header.css';
+import { header, icon, txt } from './styles';
 import { BiChevronLeft, BiChevronUp, BiPoll } from 'react-icons/bi';
-import { Option } from '@/types/poll.type';
-import Poll from '../Poll/Poll';
+import { Option } from '@/types/chat/poll';
+import Poll from '../Poll';
 import { useState } from 'react';
 
 const OPTIONS: Option[] = [

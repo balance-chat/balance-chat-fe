@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
-import { ChatBy } from '@/types/message.type';
-import { container, right } from './MessageGroup.css';
-import ChatAvatar from '../ChatAvatar/ChatAvatar';
+import { ChatBy } from '@/types/chat/message';
+import { container, right } from './styles';
+import ChatAvatar from '../ChatAvatar';
 import UserMessages from '../Messages/UserMessages';
 import OtherMessages from '../Messages/OtherMessages';
 

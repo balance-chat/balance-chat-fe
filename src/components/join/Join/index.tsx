@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
-import JoinForm from '../JoinForm/JoinForm';
-import { FormHeader } from '@/components/ui/FormHeader';
+import JoinForm from '../JoinForm';
+import FormHeader from '@/components/ui/FormHeader';
 
 function Join() {
   return (

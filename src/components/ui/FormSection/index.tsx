@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { section, txt } from './index.css';
+import { section, txt } from './styles';
 
 interface Props {
   children: React.ReactNode;
@@ -16,4 +16,4 @@ function FormSection({ children, title }: Props) {
   );
 }
 
-export { FormSection };
+export default FormSection;

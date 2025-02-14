@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { DivProps } from '@/types/props.type';
+import { DivProps } from '@/types/common/props';
 
 function Content({ children, ...props }: DivProps) {
   return (
@@ -17,4 +17,4 @@ function Content({ children, ...props }: DivProps) {
   );
 }
 
-export { Content };
+export default Content;

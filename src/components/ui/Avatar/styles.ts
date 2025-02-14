@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { sizes } from './styles.constant';
+import { avatar as sizes } from '@/constants/sizes';
 
 export const avatarSize = (size: 's' | 'm') => css`
   width: ${sizes[size].width};
