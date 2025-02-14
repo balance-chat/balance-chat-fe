@@ -4,7 +4,7 @@ import { section, txt } from './FormSection.css';
 
 interface Props {
   children: React.ReactNode;
-  title?: string;
+  title?: string | null;
 }
 
 function FormSection({ children, title }: Props) {
