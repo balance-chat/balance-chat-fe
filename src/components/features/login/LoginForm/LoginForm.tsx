@@ -4,10 +4,13 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { LoginFormData } from '@/types/auth/account';
 import { Form } from '@/components/ui/Form/Form';
 import { forgot } from './LoginForm.css';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { loginSchema } from '@/constants/yup';
 
 function LoginForm() {
   const methods = useForm<LoginFormData>({
     mode: 'onTouched',
+    resolver: yupResolver(loginSchema),
   });
 
   const onSubmit: SubmitHandler<LoginFormData> = (data) => {
