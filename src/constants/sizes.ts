@@ -1,4 +1,4 @@
-export const sizes = {
+export const avatar = {
   s: {
     width: '28px',
     height: '28px',

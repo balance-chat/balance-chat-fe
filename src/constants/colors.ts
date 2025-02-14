@@ -1,4 +1,4 @@
-export const colors = {
+export const options = {
   unselected: {
     background: '#efefef',
     text: '#333333',
