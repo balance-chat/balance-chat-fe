@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import FormHeader from '../../ui/FormHeader';
+import FormHeader from '../../../ui/FormHeader';
 import LoginForm from '../LoginForm';
 import { bottom, container, underline } from './styles';
 

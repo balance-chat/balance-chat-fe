@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import RootContainer from './layout/RootContainer';
+import RootContainer from './components/layout/RootContainer';
 import LoginPage from './pages/login';
 import JoinPage from './pages/join';
 import ChatPage from './pages/chat';

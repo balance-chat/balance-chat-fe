@@ -1,8 +1,8 @@
 import { ChatBy } from '@/types/chat/message';
-import Chat from '@/layout/Chat';
-import ChatInput from '@/components/chat/ChatInput';
-import MessageGroup from '@/components/chat/MessageGroup';
-import Header from '@/components/chat/Header';
+import Chat from '@/components/layout/Chat';
+import ChatInput from '@/components/features/chat/ChatInput';
+import MessageGroup from '@/components/features/chat/MessageGroup';
+import Header from '@/components/features/chat/Header';
 
 const TEST_MESSAGE = {
   MESSAGES: [
