@@ -20,13 +20,7 @@ function PasswordField({ showTitle = false }: Props) {
         type="password"
         placeholder="비밀번호"
         isValid={!errors.password}
-        {...register('password', {
-          required: '비밀번호를 입력해주세요',
-          minLength: {
-            value: 8,
-            message: '비밀번호는 최소 8자 이상이어야 해요',
-          },
-        })}
+        {...register('password')}
       />
       {errors.password && (
         <Form.ErrorMessage>{errors.password?.message}</Form.ErrorMessage>
