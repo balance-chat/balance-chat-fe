@@ -2,7 +2,7 @@
 
 import { AvatarGroup } from '@/components/ui/AvatarGroup/AvatarGroup';
 import { bg, card, cardContent, cardTitle, cnt, text } from './Option.css';
-import { options } from '@/constants/colors';
+import { options } from '@/constants/theme/colors';
 
 interface Props {
   title: string;
