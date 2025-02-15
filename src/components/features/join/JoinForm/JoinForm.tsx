@@ -1,41 +1,59 @@
 /** @jsxImportSource @emotion/react */
 
+import { useState } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { Form } from '@/components/ui/Form/Form';
+import { JoinFormData } from '@/types/auth/account';
+import { joinSchema } from '@/constants/yup';
+import { joinField } from '@/constants/form/join';
+import { FormField } from '@/components/ui/FormField/FormField';
 
 function JoinForm() {
+  const [isAgree, setIsAgree] = useState(false);
+
+  const methods = useForm<JoinFormData>({
+    mode: 'onTouched',
+    resolver: yupResolver(joinSchema),
+  });
+
+  const onClickPolicy = () => {
+    setIsAgree((prev) => !prev);
+  };
+
+  const onSubmit = (data: JoinFormData) => {
+    console.log(data);
+  };
+
   return (
-    <Form>
-      <Form.Section title="이메일 주소">
-        <Form.InputWithCheckBtn
-          type="email"
-          placeholder="이메일 주소"
-          isValidInput={true}
-          isValidBtn={false}
-        />
-      </Form.Section>
-      <Form.Section title="비밀번호">
-        <Form.Input type="password" placeholder="비밀번호" isValid={true} />
-        <Form.Input
-          type="password"
-          placeholder="비밀번호 확인"
-          isValid={true}
-        />
-      </Form.Section>
-      <Form.Section title="닉네임">
-        <Form.InputWithCheckBtn
-          type="text"
-          placeholder="닉네임"
-          isValidInput={true}
-          isValidBtn={false}
-        />
-      </Form.Section>
-      <Form.Section>
-        <Form.Agree>서비스 이용약관에 동의합니다</Form.Agree>
-      </Form.Section>
-      <Form.Section>
-        <Form.Submit isValid={false}>가입하기</Form.Submit>
-      </Form.Section>
-    </Form>
+    <FormProvider {...methods}>
+      <Form onSubmit={methods.handleSubmit(onSubmit)}>
+        <Form.Section title="이메일 주소">
+          <FormField field={joinField.email} />
+        </Form.Section>
+
+        <Form.Section title="비밀번호">
+          <FormField field={joinField.password} />
+          <FormField field={joinField.passwordConfirm} />
+        </Form.Section>
+
+        <Form.Section title="닉네임">
+          <FormField field={joinField.nickname} />
+        </Form.Section>
+
+        <Form.Section>
+          <Form.Agree isAgree={isAgree} onClick={onClickPolicy}>
+            서비스 이용약관에 동의합니다
+          </Form.Agree>
+        </Form.Section>
+
+        <Form.Section>
+          <Form.Submit isValid={methods.formState.isValid && isAgree}>
+            가입하기
+          </Form.Submit>
+        </Form.Section>
+      </Form>
+    </FormProvider>
   );
 }
 

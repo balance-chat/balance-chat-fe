@@ -2,27 +2,15 @@
 
 import { BiCheck } from 'react-icons/bi';
 import { btn, checked, icon, txt, unchecked } from './ButtonAgree.css';
-import { useState } from 'react';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  isAgree: boolean;
 }
 
-function ButtonAgree({ children, ...props }: Props) {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const toggle = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    e.preventDefault();
-    setIsChecked((prev) => !prev);
-  };
-
+function ButtonAgree({ isAgree, children, ...props }: Props) {
   return (
-    <button
-      type="button"
-      css={[btn, isChecked ? checked : unchecked]}
-      onClick={toggle}
-      {...props}
-    >
+    <button type="button" css={[btn, isAgree ? checked : unchecked]} {...props}>
       <div css={icon}>
         <BiCheck />
       </div>
