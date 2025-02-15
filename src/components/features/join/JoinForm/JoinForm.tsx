@@ -13,11 +13,15 @@ function JoinForm() {
   const {
     handleSubmit,
     register,
+    watch,
     formState: { errors, isValid },
   } = useForm<JoinFormData>({
     mode: 'onTouched',
     resolver: yupResolver(joinSchema),
   });
+
+  const emailValue = watch('email');
+  const nicknameValue = watch('nickname');
 
   const onClickPolicy = () => {
     setIsAgree((prev) => !prev);
@@ -34,7 +38,7 @@ function JoinForm() {
           type="email"
           placeholder="이메일 주소"
           isValidInput={!errors.email}
-          isValidBtn={!errors.email}
+          isValidBtn={!errors.email && !!emailValue}
           {...register('email')}
         />
         {errors.email && (
@@ -68,7 +72,7 @@ function JoinForm() {
           type="text"
           placeholder="닉네임"
           isValidInput={!errors.nickname}
-          isValidBtn={!errors.nickname}
+          isValidBtn={!errors.nickname && !!nicknameValue}
           {...register('nickname')}
         />
         {errors.nickname && (
