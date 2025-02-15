@@ -6,7 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Form } from '@/components/ui/Form/Form';
 import { JoinFormData } from '@/types/auth/account';
 import { joinSchema } from '@/constants/yup';
-import { joinFields } from '@/constants/form/join';
+import { joinField } from '@/constants/form/join';
 import { FormField } from '@/components/ui/FormField/FormField';
 
 function JoinForm() {
@@ -29,16 +29,16 @@ function JoinForm() {
     <FormProvider {...methods}>
       <Form onSubmit={methods.handleSubmit(onSubmit)}>
         <Form.Section title="이메일 주소">
-          <FormField field={joinFields.email} />
+          <FormField field={joinField.email} />
         </Form.Section>
 
         <Form.Section title="비밀번호">
-          <FormField field={joinFields.password} />
-          <FormField field={joinFields.passwordConfirm} />
+          <FormField field={joinField.password} />
+          <FormField field={joinField.passwordConfirm} />
         </Form.Section>
 
         <Form.Section title="닉네임">
-          <FormField field={joinFields.nickname} />
+          <FormField field={joinField.nickname} />
         </Form.Section>
 
         <Form.Section>

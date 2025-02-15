@@ -1,6 +1,6 @@
 import { FieldConfig, JoinFormData } from '@/types/auth/account';
 
-export const joinFields: FieldConfig<JoinFormData> = {
+export const joinField: FieldConfig<JoinFormData> = {
   email: {
     name: 'email',
     type: 'email',
