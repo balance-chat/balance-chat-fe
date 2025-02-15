@@ -3,15 +3,15 @@ import * as yup from 'yup';
 export const loginSchema = yup.object().shape({
   email: yup
     .string()
+    .required('이메일을 입력해주세요')
     .matches(
       /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
       '올바른 이메일 형식을 입력하세요'
-    )
-    .required('이메일을 입력해주세요'),
+    ),
   password: yup
     .string()
-    .min(8, '비밀번호는 최소 8자 이상이어야 해요')
-    .required('비밀번호를 입력해주세요'),
+    .required('비밀번호를 입력해주세요')
+    .min(8, '비밀번호는 최소 8자 이상이어야 해요'),
 });
 
 export const joinSchema = yup.object().shape({
@@ -45,7 +45,7 @@ export const joinSchema = yup.object().shape({
     .min(2, '2자 이상의 닉네임을 입력해주세요')
     .max(16, '16자 이하의 닉네임을 입력해주세요')
     .matches(
-      /^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,16}$/,
+      /^(?=.*[a-zA-Z0-9가-힣])[a-zA-Z0-9가-힣]{2,16}$/,
       '닉네임은 한글, 숫자, 영어만 쓸 수 있어요'
     ),
 });
