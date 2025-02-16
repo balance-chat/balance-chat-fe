@@ -2,8 +2,7 @@
 
 import { ButtonAgree } from '../ButtonAgree/ButtonAgree';
 import { ButtonSubmit } from '../ButtonSubmit/ButtonSubmit';
-import { EmailField } from '../Field/Email/EmailField';
-import { PasswordField } from '../Field/Password/PasswordField';
+import { FormField } from '../FormField/FormField';
 import { FormSection } from '../FormSection/FormSection';
 import { Input } from '../Input/Input';
 import { InputError } from '../InputError/InputError';
@@ -28,7 +27,6 @@ Form.InputWithCheckBtn = InputWithCheckBtn;
 Form.Agree = ButtonAgree;
 Form.Submit = ButtonSubmit;
 Form.ErrorMessage = InputError;
-Form.EmailField = EmailField;
-Form.PasswordField = PasswordField;
+Form.Field = FormField;
 
 export { Form };
