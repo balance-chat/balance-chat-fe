@@ -7,7 +7,6 @@ import { Form } from '@/components/ui/Form/Form';
 import { JoinFormData } from '@/types/auth/account';
 import { joinSchema } from '@/constants/yup';
 import { joinField } from '@/constants/form/join';
-import { FormField } from '@/components/ui/FormField/FormField';
 
 function JoinForm() {
   const [isAgree, setIsAgree] = useState(false);
@@ -29,16 +28,16 @@ function JoinForm() {
     <FormProvider {...methods}>
       <Form onSubmit={methods.handleSubmit(onSubmit)}>
         <Form.Section title="이메일 주소">
-          <FormField field={joinField.email} />
+          <Form.Field field={joinField.email} />
         </Form.Section>
 
         <Form.Section title="비밀번호">
-          <FormField field={joinField.password} />
-          <FormField field={joinField.passwordConfirm} />
+          <Form.Field field={joinField.password} />
+          <Form.Field field={joinField.passwordConfirm} />
         </Form.Section>
 
         <Form.Section title="닉네임">
-          <FormField field={joinField.nickname} />
+          <Form.Field field={joinField.nickname} />
         </Form.Section>
 
         <Form.Section>
