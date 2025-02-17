@@ -20,7 +20,7 @@ jobs:
         run: pnpm exec playwright install --with-deps
 
       - name: Run Playwright tests
-        run: pnpm exec playwright test > playwrite-results.txt
+        run: pnpm exec playwright test > playwright-results.txt
 
       - name: Comment on PR with test results
         if: always()
