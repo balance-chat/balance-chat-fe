@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main, develop]
 jobs:
-  playwright-test:
+  playwright-tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -20,19 +20,10 @@ jobs:
         run: pnpm exec playwright install --with-deps
 
       - name: Run Playwright tests
-        run: pnpm exec playwright test > playwright-results.txt
+        run: PLAYWRIGHT_JSON_OUTPUT_NAME=results.json pnpm exec playwright test --reporter=json
 
       - name: Comment on PR with test results
         if: always()
-        uses: actions/github-script@v6
+        uses: daun/playwright-report-summary@v3
         with:
-          script: |
-            const fs = require('fs');
-            const results = fs.readFileSync('playwright-results.txt', 'utf8');
-            const prNumber = context.payload.pull_request.number;
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              body: `## Playwright Test Results\n\n\`\`\`\n${results}\n\`\`\``
-            });
+          report-file: results.json
