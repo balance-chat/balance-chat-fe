@@ -5,6 +5,7 @@ on:
 
 permissions:
   checks: write
+  pull-requests: write
 
 jobs:
   vitest-tests:
@@ -12,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          repository: balance-chat/balance-chat-fe
 
       - uses: actions/setup-node@v4
         with:
