@@ -12,6 +12,9 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
+      - name: Cleanup Git Cache
+        run: rm -rf .git
+
       - uses: actions/checkout@v4
         with:
           repository: balance-chat/balance-chat-fe
