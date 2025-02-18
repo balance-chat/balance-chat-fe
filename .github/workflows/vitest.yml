@@ -45,7 +45,7 @@ jobs:
         with:
           header: test-results
           message: |
-            ### 테스트 결과
+            ## 테스트 요약
 
             ${{ steps.test-report.outputs.failed == 0 && steps.test-report.outputs.skipped == 0 && '#### ✅ 모든 테스트를 통과했어요' || '' }}
             ${{ steps.test-report.outputs.passed == 0 && '#### ❌ 모든 테스트를 실패했어요' || '' }}
@@ -55,8 +55,4 @@ jobs:
             * 실패: `${{ steps.test-report.outputs.failed }} / ${{ steps.test-report.outputs.total }}`
             * 스킵: `${{ steps.test-report.outputs.skipped}} / ${{ steps.test-report.outputs.total }}`
 
-            <details>
-            <summary>Details</summary>
-
-            ${{ steps.test-report.outputs.details }}
-            </details>
+            [자세한 리포트 보기](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
