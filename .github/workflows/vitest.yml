@@ -16,9 +16,6 @@ jobs:
         run: rm -rf .git
 
       - uses: actions/checkout@v4
-        with:
-          repository: balance-chat/balance-chat-fe
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -47,7 +44,6 @@ jobs:
           message: |
             ### 테스트 결과
 
-            #### Summary
             ${{ steps.test-report.outputs.failed == 0 && steps.test-report.outputs.skipped == 0 && '#### ✅ 모든 테스트를 통과했어요' || '' }}
             ${{ steps.test-report.outputs.passed == 0 && '#### ❌ 모든 테스트를 실패했어요' || '' }}
             ${{ steps.test-report.outputs.failed > 0 && steps.test-report.outputs.passed > 0 && '#### ⚠️ 일부 테스트를 실패했어요' || '' }}
