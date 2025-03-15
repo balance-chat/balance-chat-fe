@@ -7,7 +7,7 @@
 1. Repository 클론
 
    ```
-   $ git clone https://github.com/eunjios/balance-chat
+   $ git clone https://github.com/balance-chat/balance-chat-fe.git
    ```
 
 2. 노드 버전 설정
